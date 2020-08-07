@@ -27,6 +27,11 @@ function writePassword() {
     comboArr = numbers.concat(lwrCase)
     password[i] = comboArr[Math.floor(Math.random() * comboArr.length)]
 
+  }if ((numConf = true) || (lwrCaseConf = true )|| (uprCaseConf = true) || (specCharConf =false)) {
+    comboArr = numbers.concat(lwrCase, uprCase)
+    console.log(comboArr)
+    password[i] = comboArr[Math.floor(Math.random() * comboArr.length)]
+
   }
     }
     
