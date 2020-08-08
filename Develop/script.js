@@ -13,7 +13,7 @@ function writePassword() {
   var numbers = [1,2,3,4,5,6,7,8,9,0,];
   var lwrCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
   var uprCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-  var specChar = []
+  var specChar = [ " ","!","#","$","%","&","'","(",")","*","+","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~",]
   var comboArr = []
   
   var password=[]
@@ -29,7 +29,10 @@ function writePassword() {
 
   }if ((numConf = true) || (lwrCaseConf = true )|| (uprCaseConf = true) || (specCharConf =false)) {
     comboArr = numbers.concat(lwrCase, uprCase)
-    console.log(comboArr)
+    password[i] = comboArr[Math.floor(Math.random() * comboArr.length)]
+
+  }if ((numConf = true) || (lwrCaseConf = true )|| (uprCaseConf = true) || (specCharConf =true)) {
+    comboArr = numbers.concat(lwrCase, uprCase, specChar)
     password[i] = comboArr[Math.floor(Math.random() * comboArr.length)]
 
   }
