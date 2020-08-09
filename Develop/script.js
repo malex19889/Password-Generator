@@ -75,6 +75,7 @@ for (var i = 0; i < pwdLength; i++) {
  } 
 //  send password to html
   var passwordText = document.querySelector("#password");
+  // remove commas from array
   passwordText.value = password.join("");
 
 }
