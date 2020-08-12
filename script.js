@@ -5,13 +5,13 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
 //  character arrays
   var numbers = [1,2,3,4,5,6,7,8,9,0,];
-  var lwrCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-  var uprCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-  var specChar = [ " ","!","#","$","%","&","'","(",")","*","+","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~",]
+  var lwrCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  var uprCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var specChar = [ " ","!","#","$","%","&","'","(",")","*","+","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~",];
   // array for combining appropriate arrays
-  var comboArr = [""]
+  var comboArr = [""];
   // password blank array
-  var password=[]
+  var password=[];
 //  prompt for password length
   var pwdLength = prompt("Enter desired password length. Must between 8-128");
   // conditional statemnt for inproper input
@@ -33,7 +33,7 @@ function writePassword() {
   var lwrCaseConf = confirm("Would you like lower case letters in your password?");
   // add lower case letters to combo array
   if (lwrCaseConf === true) {
-    comboArr= comboArr.concat(lwrCase)
+    comboArr= comboArr.concat(lwrCase);
   }
   // pass combo array without adding lower case letters
   if (lwrCaseConf === false) {
@@ -43,7 +43,7 @@ function writePassword() {
   var uprCaseConf = confirm("Would you like any uppercase letter in your password?");
   // add upper case letter to combo array
   if (uprCaseConf === true) {
-      comboArr= comboArr.concat(uprCase)
+      comboArr= comboArr.concat(uprCase);
     }
   // pass combo aray without adding upper case letters
   if (uprCaseConf === false) {
@@ -53,7 +53,7 @@ function writePassword() {
   var specCharConf = confirm("Would you like any special characters in your password?");
   // add special chars to combo array
   if (specCharConf === true) {
-      comboArr= comboArr.concat(specChar)
+      comboArr= comboArr.concat(specChar);
     }
   // pass combo array without adding special chars
   if (specCharConf === false) {
@@ -64,7 +64,7 @@ function writePassword() {
   (lwrCaseConf === false)&&
   (uprCaseConf === false)&&
   (specCharConf === false)){
-    alert("No values were selected no password could be generated!\n Please try again.")
+    alert("No values were selected no password could be generated!\n Please try again.");
   }
 
 // for loop to asign randome value to password array from combo array
